@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/LMWu6GmP)
 # Project 2: Wall Bouncer
 
 ## Background
@@ -99,4 +100,6 @@ Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseud
 #### 3.4 (4%) Energy Efficient Path Planning 
 > The goal is using this robot to cover a rectangle-shape area.
 > Do your research, make reasonable assumptions and propose a path pattern for the robot to follow.
-> Please state why this pattern is energy efficient.  
+> Please state why this pattern is energy efficient.
+#### To go around a rectangular area using the least amount of power, the robot should follow the **perimeter of the rectangle in a single continuous loop** at a constant speed. This approach is energy efficient because it minimizes the total distance traveled and avoids unnecessary turns, stops, or changes in direction. Maintaining smooth, steady motion reduces energy losses from acceleration, deceleration, and wheel slip, which are especially costly for a differential-drive robot. By keeping turns limited to the four 90-degree corners of the rectangle and avoiding backtracking or random motion, the robot conserves battery power while still fully traversing the rectangular boundary.
+#### If the robot needed to cover the entire rectangle, inside and border, an energy-efficient way for the robot to cover a rectangular area is a lawnmower (boustrophedon) path, where the robot moves back and forth in parallel straight lines across the area, shifting sideways after each pass. This pattern is energy efficient because it maximizes straight-line motion, which consumes less energy than frequent turning, acceleration, and deceleration. Only a small number of 90° turns are required at the ends of each pass, and there is no unnecessary backtracking. Assuming the robot’s coverage width is approximately its body width with slight overlap and the area is mostly unobstructed, this path minimizes total travel distance and motor workload, resulting in lower energy consumption and longer operating time.
